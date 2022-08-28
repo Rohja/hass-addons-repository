@@ -1,0 +1,41 @@
+{
+    "name": "Nginx Reverse Proxy (with Ingress)",
+    "version": "1.0",
+    "slug": "nginx-reverse-proxy",
+    "description": "Have external apps as tabs in HA that are compatible with Nabu Casa.",
+    "uart": false,
+    "url": "https://github.com/Rohja/hass-addons-repository/tree/main/nginx",
+    "startup": "application",
+    "services": [
+      "mqtt:need"
+    ],
+    "arch": [
+      "aarch64",
+      "amd64",
+      "armhf",
+      "armv7",
+      "i386"
+    ],
+    "boot": "auto",
+    "init": false,
+    "ingress": true,
+    "timeout": 30,
+    "panel_icon": "mdi:web",
+    "map": [
+      "share:rw",
+      "config:rw"
+    ],
+    "ports": {
+      "80/tcp": 80
+    },
+    "ports_description": {
+      "80/tcp": "Nginx http port"
+    },
+    "options": {
+      "data_path": "/config/nginx"
+    },
+    "schema": {
+      "data_path": "str"
+    },
+    "image": "nginx:latest"
+  }
