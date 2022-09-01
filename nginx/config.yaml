@@ -1,6 +1,6 @@
 name: "Nginx Ingress"
 description: "My first real add-on!"
-version: "1.0.2"
+version: "1.0.3"
 slug: "nginx_ingress"
 init: false
 arch:
@@ -10,5 +10,6 @@ arch:
   - armv7
   - i386
 #image: repo/nginx-hass-ingress-{arch}
+ports:
+  - "80/tcp": 8099
 ingress: true
-ingress_port: 80
