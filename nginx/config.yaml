@@ -9,4 +9,4 @@ arch:
   - armhf
   - armv7
   - i386
-image: repo/nginx-hass-ingress-{arch}
+#image: repo/nginx-hass-ingress-{arch}
