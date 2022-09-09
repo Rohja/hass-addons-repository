@@ -1,6 +1,6 @@
 name: "Nginx Ingress"
-description: "My first real add-on!"
-version: "1.0.5"
+description: "proxy_pass anything"
+version: "1.0.6"
 slug: "nginx_ingress"
 init: false
 arch:
@@ -9,10 +9,21 @@ arch:
   - armhf
   - armv7
   - i386
-#image: repo/nginx-hass-ingress-{arch}
 ports:
   "80/tcp": null
 ports_description:
   80/tcp: Not required for Ingress
 ingress: true
 ingress_port: 80
+options:
+  reverse_proxy:
+    - path: /google
+      dest: https://www.google.com
+schema:
+  reverse_proxy:
+    - path: str
+      dest: str
+configuration:
+  reverse_proxy:
+    - path: Path to use, have to match `/[a-zA-Z0-9]+`
+      dest: URL of the service to proxify
