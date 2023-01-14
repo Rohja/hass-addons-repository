@@ -1,6 +1,6 @@
 name: "Nginx Ingress"
 description: "proxy_pass anything"
-version: "1.0.8"
+version: "1.0.9"
 slug: "nginx_ingress"
 init: false
 arch:
