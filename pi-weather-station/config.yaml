@@ -1,11 +1,11 @@
 name: "Pi Weather Station"
 description: "Easy way to install Pi Weather Station on HA!"
-version: "1.0.0"
+version: "1.0.1"
 slug: "pi_weather_station"
 init: false
 arch:
   - amd64
-image: seanriggs/pi-weather-station:latest
+# image: seanriggs/pi-weather-station:latest
 ingress: true
 ingress_port: 8080
 panel_icon: "mdi:weather-partly-lightning"
