@@ -1,3 +1,9 @@
 FROM seanriggs/pi-weather-station:latest
 
-RUN ln /app /data
+RUN mkdir /data
+
+RUN mv /app/settings.json /data/settings.json
+
+RUN ln -s /data/settings.json /app/settings.json
+
+RUN ls -lah /app
