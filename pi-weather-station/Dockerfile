@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 RUN apk add --update nodejs npm git
 
-RUN git clone https://github.com/elewin/pi-weather-station.git /app
+RUN git clone https://github.com/Rohja/pi-weather-station.git /app
 
 WORKDIR /app
 
