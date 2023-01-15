@@ -1,9 +1,16 @@
-FROM seanriggs/pi-weather-station:latest
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
-RUN mkdir /data
+RUN apk add --update nodejs npm git
 
-RUN mv /app/settings.json /data/settings.json
+RUN git clone https://github.com/elewin/pi-weather-station.git /app
 
-RUN ln -s /data/settings.json /app/settings.json
+WORKDIR /app
 
-RUN ls -lah /app
+RUN npm install
+
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
