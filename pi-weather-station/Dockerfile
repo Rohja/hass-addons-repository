@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apk add --update nodejs npm git
+RUN apk add --update git nodejs npm
 
 RUN git clone https://github.com/Rohja/pi-weather-station.git /app
 

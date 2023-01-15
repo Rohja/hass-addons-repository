@@ -1,6 +1,6 @@
 name: "Pi Weather Station"
 description: "Pi Weather Station directly in your Home Assistant"
-version: "1.0.6"
+version: "1.0.8"
 slug: "pws_ha"
 init: false
 arch:
